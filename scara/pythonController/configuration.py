@@ -59,5 +59,5 @@ def save_file(matrix, file_name="joints"):
     file_name : string
         default name "joints" or asign any other name
     """
-    np.savetxt("results/"+file_name+".csv",matrix, delimiter=',', fmt='%.6f') 
+    np.savetxt("../results/"+file_name+".csv",matrix, delimiter=',', fmt='%.6f') 
     
