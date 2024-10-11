@@ -3,8 +3,6 @@
 @author: Javier
 """
 import modern_robotics as mr
-import numpy as np
-import math as mt
 import configuration as config
 
 def euler_step(angles,speed,limits,delta_t):
@@ -34,7 +32,7 @@ def euler_step(angles,speed,limits,delta_t):
     new_angle = angles + speed*delta_t
     return new_angle 
 
-def next_state(arm_angles,arm_joint_speed,delta_t,arm_limits):
+def next_state(arm_angles,arm_joint_speed,delta_t,arm_speed_limits):
     """
     Parameters
     ----------
@@ -45,7 +43,7 @@ def next_state(arm_angles,arm_joint_speed,delta_t,arm_limits):
         Control velocities, to simulate the robot motion.
     delta_t : float
         difference between actual theta and past theta.
-    limits : matrix (2x1)
+    arm_speed_limits : matrix (2x1)
         Matrix that describe the minimum and maximum speed allowed limits.
         [[min_arm_speed],[max_arm_speed]]
     Returns
@@ -59,10 +57,31 @@ def next_state(arm_angles,arm_joint_speed,delta_t,arm_limits):
     new_arm_angles = []
     
     for i in range(0,len(arm_angles)):
-        new_arm_angles.append(euler_step(arm_angles[i], arm_joint_speed[i], arm_limits, delta_t))
-
- 
-if __name__ == "__main__":
+        new_arm_angles.append(euler_step(arm_angles[i], 
+                                         arm_joint_speed[i], 
+                                         arm_speed_limits, 
+                                         delta_t))
     
+    return new_arm_angles
+
+
+def robot_jacobian (theta_arm_list): 
+    """
+    Parameters
+    ----------
+    theta_arm_list : array (1x5)
+        Actual arm joints theta angles in form [j1,j2,j3.j4].
+        
+    Returns
+    -------
+    Je : matrix (6x4)
+        Jacobian representation of the arm_jacobian
+
+    """
+    arm_jacobian = mr.JacobianBody(config.B_list,theta_arm_list)
+    
+    return arm_jacobian
+
+
 
 

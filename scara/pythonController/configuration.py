@@ -26,13 +26,13 @@ B_list = np.array([[0,      0,      0, 0],
                    [0,      0,      -1,0]])
 
 # [J1,J2,J3,J4] arm angles limits (rad)
-arm_angles_limits = np.array([[-2.807,-2.4,0,    -3.142],
-                              [ 2.807, 2.4,0.164, 3.142]])
+arm_angles_limits = np.array([[-2.807,-2.4, -0.0001,  -3.142],
+                              [ 2.807, 2.4, 0.164, 3.142]])
 
 # speed limits [arm joint in position mode(rad/s),arm joint in velocity mode(rad/s)] 
 # this values were assumed!!!
-speed_limits = np.array([[10,0.03],
-                         [10,2.5]])
+speed_limits = np.array([[-10,0.03],
+                         [ 10,2.5]])
 
 
 # cube initial position
