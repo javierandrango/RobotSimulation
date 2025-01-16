@@ -1,5 +1,8 @@
 # Animation
-<img src="https://github.com/javierandrango/RobotSimulation/blob/main/images/scara-csv.gif" width='50%'>
+<p align="center">
+ <img src="https://github.com/javierandrango/RobotSimulation/blob/scara/images/scara-csv.gif" width='30%'>
+</p>
+
 
 # Description
 Motion control of a Scara robot (RRPR) with suction pad using velocity inputs.
@@ -16,7 +19,10 @@ In practice, positions errors will accumulate over time under the `feedforward c
 
 $$ \dot{\theta}(t) = \dot{\theta}_d(t) + K_p \theta_e(t) + k_i \int_{0}^{t} \theta_e(t)dt$$
 
-<img src="https://github.com/javierandrango/RobotSimulation/blob/main/images/feedforwardPI_plus_feedback_control.png" width='50%'>
+<p align="center">
+ <img src="https://github.com/javierandrango/RobotSimulation/blob/scara/images/feedforwardPI_plus_feedback_control.png" width='50%'>
+</p>
+
 
 
 `Feedforward plus P.I Feedback control` expresed as a task-space motion control:
@@ -60,16 +66,20 @@ The commanded speed of the joints are equal to the dot product of the pseudo-inv
 
 # Results
 Trajectory:
-
-<img src="https://github.com/javierandrango/RobotSimulation/blob/main/images/trajectory.gif" width='50%'>
+<p align="center">
+ <img src="https://github.com/javierandrango/RobotSimulation/blob/scara/images/trajectory.gif" width='50%'>
+</p>
 
 Robot control:
-
-<img src="https://github.com/javierandrango/RobotSimulation/blob/main/images/scara-csv.gif" width='50%'>
+<p align="center">
+ <img src="https://github.com/javierandrango/RobotSimulation/blob/scara/images/scara-csv.gif" width='50%'>
+</p>
 
 Manual control:
+<p align="center">
+ <img src="https://github.com/javierandrango/RobotSimulation/blob/scara/images/scara-joints.gif" width='50%'>
+</p>
 
-<img src="https://github.com/javierandrango/RobotSimulation/blob/main/images/scara-joints.gif" width='50%'>
 
 
 
