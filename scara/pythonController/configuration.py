@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-@author: Javier
+@author: Javier Andrango
 """
 import modern_robotics as mr
 import math as mt

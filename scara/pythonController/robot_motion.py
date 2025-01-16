@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-@author: Javier
+@author: Javier Andrango
 """
 import configuration as config
 import kinematics as kinematics
