@@ -1,5 +1,5 @@
 # Animation
-<img src="https://github.com/javierandrango/RobotSimulation/blob/main/images/scara.gif" width='50%'>
+<img src="https://github.com/javierandrango/RobotSimulation/blob/main/images/scara-csv.gif" width='50%'>
 
 # Description
 Motion control of a Scara robot (RRPR) with suction pad using velocity inputs.
